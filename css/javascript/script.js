@@ -1,9 +1,9 @@
 // ===== Contato WhatsApp =====
 document.getElementById("whatsappBtnHero").addEventListener("click", () => {
-  window.open("https://wa.me/5545998181217", "_blank");
+  window.open("https://api.whatsapp.com/send/?phone=5545998181217&text&type=phone_number&app_absent=0", "_blank");
 });
 document.getElementById("contactWhatsapp").addEventListener("click", () => {
-  window.open("https://wa.me/5545998181217", "_blank");
+  window.open("https://api.whatsapp.com/send/?phone=5545998181217&text&type=phone_number&app_absent=0", "_blank");
 });
 
 // ===== Contato Email =====
