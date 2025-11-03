@@ -1,105 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DValle - Soluções Integradas</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DValle Sistemas</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <nav>
+  <nav class="navbar">
     <div class="container nav-container">
-      <div class="logo">
-        <div class="logo-icon">🗂️</div>
-        <span>DValle Sistemas </span>
-      </div>
-      <div class="nav-buttons">
-        <button id="emailBtn">Email</button>
-        <button id="whatsappBtnHero">WhatsApp</button>
-      </div>
+      <a href="#inicio" class="logo">
+        <img src="img/logo-dvalle.png" alt="Logo DValle" class="logo-img">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <button id="themeToggle" class="theme-toggle">🌙</button>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <span class="badge">Soluções Integradas</span>
-      <h1><span class="gradient-text">Soluções Integradas</span> para seu negócio</h1>
-      <p>Transforme a gestão fiscal da sua empresa com tecnologia de ponta, integração completa e suporte especializado.</p>
+  <header id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Bem-vindo à DValle Sistemas</h1>
+      <p>Soluções inteligentes para o crescimento do seu negócio.</p>
       <div class="hero-buttons">
-        <button id="whatsappBtnHero" class="btn primary">Fale Conosco</button>
-        <button id="emailBtn" class="btn outline">Email</button>
+        <button id="btn-whatsapp-top" class="btn-primary">WhatsApp</button>
+        <button id="btn-email-top" class="btn-secondary">E-mail</button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- ABOUT -->
-  <section class="about">
+  <section id="sobre" class="section">
     <div class="container">
-      <h2>Sobre a <span>DValle</span></h2>
-      <p>Somos especialistas em soluções fiscais integradas para empresas de todos os portes. Com tecnologia de ponta e expertise no mercado brasileiro, oferecemos softwares que simplificam a emissão de notas fiscais e garantem total conformidade com a legislação vigente.</p>
+      <h2>Sobre Nós</h2>
+      <p>Somos uma empresa especializada em sistemas empresariais, oferecendo soluções tecnológicas que otimizam processos e aumentam resultados.</p>
     </div>
   </section>
 
-  <!-- SOLUTIONS -->
-  <section class="solutions">
+  <section id="servicos" class="section">
     <div class="container">
-      <h2>Nossas <span>Soluções</span></h2>
-      <p>Tecnologia completa para gestão fiscal da sua empresa</p>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">📝</div>
-          <h3>Emissão de Notas Fiscais</h3>
-          <p>Emita notas fiscais eletrônicas de forma rápida, simples e totalmente integrada ao seu sistema.</p>
+      <h2>Serviços</h2>
+      <div class="services">
+        <div class="service-card">
+          <h3>Automação Comercial</h3>
+          <p>Gerencie sua empresa com mais eficiência através de nossos sistemas personalizados.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">📦</div>
-          <h3>Controle de Estoque</h3>
-          <p>Gerencie seu estoque de forma eficiente com controle completo de entradas, saídas e inventário.</p>
+        <div class="service-card">
+          <h3>Suporte Técnico</h3>
+          <p>Atendimento rápido e eficaz para manter seu negócio sempre em funcionamento.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🛡️</div>
-          <h3>Conformidade Fiscal</h3>
-          <p>Mantenha-se 100% em conformidade com as legislações fiscais brasileiras automaticamente.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">⚡</div>
-          <h3>Integração Rápida</h3>
-          <p>Integre facilmente com seu ERP, sistema de vendas ou plataforma de e-commerce.</p>
+        <div class="service-card">
+          <h3>Consultoria</h3>
+          <p>Auxiliamos na implementação e no uso inteligente da tecnologia em sua empresa.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact">
+  <section id="contato" class="section">
     <div class="container">
-      <h2>Pronto para transformar sua gestão fiscal?</h2>
-      <div class="contact-cards">
-        <div id="contactWhatsapp" class="contact-card">
-          <div class="contact-icon">📱</div>
-          <h3>WhatsApp</h3>
-          <span>+55 (45) 99818-1217</span>
-        </div>
-        <div id="contactEmail" class="contact-card">
-          <div class="contact-icon">✉️</div>
-          <h3>Email</h3>
-          <span>reymondlima8@gmail.com</span>
-        </div>
+      <h2>Fale Conosco</h2>
+      <p>Entre em contato com a DValle Sistemas e descubra como podemos ajudar sua empresa a crescer.</p>
+      <div class="contact-buttons">
+        <button id="btn-whatsapp-bottom" class="btn-primary">WhatsApp</button>
+        <button id="btn-email-bottom" class="btn-secondary">E-mail</button>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
+  <footer class="footer">
     <div class="container">
-      <div class="logo-footer">
-        <div class="logo-icon">🗂️</div>
-        <span>DValle</span>
-      </div>
-      <p>© 2025 DValle. Todos os direitos reservados.</p>
+      <p>© 2025 DValle Sistemas — Todos os direitos reservados.</p>
     </div>
   </footer>
 

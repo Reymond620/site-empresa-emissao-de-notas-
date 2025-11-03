@@ -1,31 +1,44 @@
 // ===== Contato WhatsApp =====
-document.getElementById("whatsappBtnHero").addEventListener("click", () => {
-  window.open("https://api.whatsapp.com/send/?phone=5545998181217&text&type=phone_number&app_absent=0", "_blank");
-});
-document.getElementById("contactWhatsapp").addEventListener("click", () => {
-  window.open("https://api.whatsapp.com/send/?phone=5545998181217&text&type=phone_number&app_absent=0", "_blank");
+const whatsappLinks = [
+  "btn-whatsapp-top",
+  "btn-whatsapp-bottom"
+];
+whatsappLinks.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener("click", () => {
+      window.open("https://api.whatsapp.com/send/?phone=5545998181217&text&type=phone_number&app_absent=0", "_blank");
+    });
+  }
 });
 
 // ===== Contato Email =====
-document.getElementById("emailBtn").addEventListener("click", () => {
-  window.location.href = "mailto:reymondlima8@gmail.com";
+const emailLinks = [
+  "btn-email-top",
+  "btn-email-bottom"
+];
+emailLinks.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener("click", () => {
+      window.location.href = "mailto:reymondlima8@gmail.com";
+    });
+  }
 });
-document.getElementById("contactEmail").addEventListener("click", () => {
-  window.location.href = "mailto:reymondlima8@gmail.com";
-});
 
-// ===== Fade-in simples para todas as seções =====
-const faders = document.querySelectorAll('.fade-in');
-const options = { threshold: 0.1 };
+// ===== Modo Escuro =====
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
 
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.classList.add('appear');
-    appearOnScroll.unobserve(entry);
-  });
-}, options);
+// carregar preferencia salva
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  themeToggle.textContent = "☀️";
+}
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  const isDark = body.classList.contains("dark-mode");
+  themeToggle.textContent = isDark ? "☀️" : "🌙";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
